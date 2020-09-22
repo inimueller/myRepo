@@ -1,0 +1,50 @@
+<!-- 1. IMPUT
+summary: get list of countries that match the input we got from the user.
+
+if the user types gibberish, render a "no results" message onscreen
+if the input field is empty, no countries should be shown
+
+2. MOUSEOVER (country)
+summary: highlight country the user is currently hovering over.
+as you mouseover a country, add a class called highlight to the country you're currently mousing over, and we'll want to remove highlight from all the other countries.
+the highlight class is defined in CSS, and will add a background color to the element its applied to
+event delegation will be needed to add the event handler to the p tags
+
+3. MOUSEDOWN (country)
+summary: put country the user mouse downed (clicked) on in the input field.
+set the value of the input field to the text contained by the event target. Event here refers to the event object we get with every event.
+the list of countries should go away
+
+4. KEYDOWN (input field)
+summary: allow user to scroll through the list using the up and down arrow keys on their keyboard. And, if the user presses "enter" while a country is highlighted, that country should appear in the input field.
+
+4.1. down arrow (40)
+
+IF no country has the highlight class, add highlight to the first country
+
+IF the last country has the highlight class, do nothing
+
+IF a country other than the last one has the highlight class, remove the highlight class from the element that has it and add it to the next one
+
+in jQuery terms, "index" is .eq(0).
+
+prev and next
+
+4.2 up arrow (38)
+
+IF no country has the highlight class, add the highlight class to the last country
+
+IF the first country has the highlight class, do nothing
+
+IF a country other than the first one has the highlight class, remove the highlight class from the element that has it and add it to the previous
+
+4.3. enter/return (13)
+
+set the value of the input field to the text contained by the element that has the highlight class
+
+5. FOCUS (input field)
+summary: show the results for the input currently in the input field.
+
+
+6. BLUR (happens when you clicked outside of the input field) (input field)
+summary: hide the list of countries. -->
